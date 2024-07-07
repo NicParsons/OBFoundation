@@ -29,5 +29,4 @@ extension Decimal {
 }
 
 //  Decimal.swift
-//  TributeCalculator
 //  Created by Nicholas Parsons on 3/1/2022.
