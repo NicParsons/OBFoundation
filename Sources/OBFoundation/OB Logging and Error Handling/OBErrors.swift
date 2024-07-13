@@ -4,7 +4,7 @@ import Foundation
  - consider making errors conform to LocalizedError
  - consider grouping related errors into separate enumerations
  */
-enum OBError: Error {
+public enum OBError: Error {
 	case resourceNotFound(String)
 case couldNotLoadFile(String)
 	case couldNotDecodeJSON(String)

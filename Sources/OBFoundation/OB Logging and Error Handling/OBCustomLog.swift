@@ -1,16 +1,15 @@
 import Foundation
 
-struct OBCustomLog: Identifiable, Codable, Hashable {
-	var id = UUID()
-	var date = Date()
-	var message: String
-	var priority: LogType = .debug
+public struct OBCustomLog: Identifiable, Codable, Hashable {
+	public var id = UUID()
+	public var date = Date()
+	public var message: String
+	public var priority: LogType = .debug
 
-	enum LogType: String, Hashable, CaseIterable, Codable {
+	public enum LogType: String, Hashable, CaseIterable, Codable {
 case debug, error
 	}
 }
 
 //  OBCustomLog.swift
-//  TributeCalculator
 //  Created by Nicholas Parsons on 3/4/2022

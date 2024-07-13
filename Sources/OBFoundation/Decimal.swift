@@ -1,6 +1,6 @@
 import Foundation
 
-extension Decimal {
+public extension Decimal {
     mutating func roundTo(decimalPlaces scale: Int, rounding roundingMode: NSDecimalNumber.RoundingMode = .plain) {
         let OB = OBLog()
         OB.debug("Rounding \(self) to \(scale) decimal places.")

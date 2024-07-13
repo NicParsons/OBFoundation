@@ -1,9 +1,9 @@
 import Foundation
 import SwiftUI
 
-class OBErrorHandling: ObservableObject {
-	@Published var errorNotification: OBErrorNotification?
-	var hasError: Binding<Bool> {
+public class OBErrorHandling: ObservableObject {
+	@Published public var errorNotification: OBErrorNotification?
+	public var hasError: Binding<Bool> {
 		return Binding<Bool>(get: {
 			self.errorNotification != nil
 		}, set: { newValue in
@@ -11,26 +11,25 @@ class OBErrorHandling: ObservableObject {
 		})
 	}
 
-	func handle(_ error: Error) {
+	public func handle(_ error: Error) {
 		OBLog().log(error)
 errorNotification = OBErrorNotification(error)
 	}
 
-	func handle(_ error: Error, withTitle title: String) {
+	public func handle(_ error: Error, withTitle title: String) {
 		OBLog().log(error)
 		errorNotification = OBErrorNotification(error, title: title)
 	}
 
-	func handle(_ error: Error, withTitle title: String, message: String) {
+	public func handle(_ error: Error, withTitle title: String, message: String) {
 		OBLog().log(error)
 		errorNotification = OBErrorNotification(error, title: title, message: message)
 	}
 
-	func dismiss() {
+	public func dismiss() {
 		errorNotification = nil
 	}
 }
 
 //  OBErrorHandling.swift
-//  TributeCalculator
 //  Created by Nicholas Parsons on 7/4/2022.
