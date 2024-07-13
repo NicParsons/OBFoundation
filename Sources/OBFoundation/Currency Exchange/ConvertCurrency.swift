@@ -27,5 +27,4 @@ public func convert(_ amount: Decimal, from source: Currency, to target: Currenc
 } // func
 
 //  ConvertCurrency.swift
-//  TributeCalculator
 //  Created by Nicholas Parsons on 14/1/2022.

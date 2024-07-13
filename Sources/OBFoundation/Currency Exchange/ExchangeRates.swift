@@ -1,8 +1,8 @@
 import Foundation
 
-typealias ExchangeRateDictionary = [String:ExchangeRate]
+public typealias ExchangeRateDictionary = [String:ExchangeRate]
 
-struct ExchangeRate: Codable {
+public struct ExchangeRate: Codable {
 	let shortName: String // e.g. "AUD/USD"
 	var price: Decimal = 1.0
 	var high: Decimal
@@ -24,7 +24,7 @@ struct ExchangeRate: Codable {
 		case open = "regularMarketOpen"
 	}
 
-	enum PricePoint: Hashable {
+	public enum PricePoint: Hashable {
 case low, high, market
 	}
 
@@ -57,7 +57,7 @@ return Currency(rawValue: code)
 		"1 \(from?.rawValue ?? "nil") = \(price) \(to?.rawValue ?? "nil")."
 	}
 
-	init(from source: Currency, to target: Currency, equals rate: Decimal) {
+	public init(from source: Currency, to target: Currency, equals rate: Decimal) {
 		shortName = source.rawValue + "/" + target.rawValue
 		price = rate
 		high = rate
@@ -71,11 +71,10 @@ return Currency(rawValue: code)
 		lastUpdated = Date.distantPast
 	} // init
 
-	init(from source: Currency, to target: Currency) {
+	public init(from source: Currency, to target: Currency) {
 		self.init(from: source, to: target, equals: 1.0)
 	} // init
 } // struct
 
 //  ExchangeRates.swift
-//  TributeCalculator
 //  Created by Nicholas Parsons on 2/1/2022.

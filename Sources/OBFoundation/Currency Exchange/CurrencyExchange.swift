@@ -176,5 +176,4 @@ let encoder = JSONEncoder()
 } // class
 
 //  CurrencyExchange.swift
-//  TributeCalculator
 //  Created by Nicholas Parsons on 14/1/2022.

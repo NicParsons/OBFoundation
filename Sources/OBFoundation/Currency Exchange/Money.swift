@@ -30,8 +30,8 @@ return amount.formatted(.currency(code: currency.rawValue))
         }
 
 	public init(amount: Decimal, currency: Currency) {
-		amount = amount
-		currency = currency
+		self.amount = amount
+		self.currency = currency
 	} // init
 } // Money struct
 
