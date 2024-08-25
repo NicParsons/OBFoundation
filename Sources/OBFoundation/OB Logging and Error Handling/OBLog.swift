@@ -4,7 +4,7 @@ import os
 import OSLog
 
 public class OBLog {
-    public var logger: Logger = Logger(subsystem: "app.openbooks.TributeCalculator", category: "general")
+    public var logger: Logger
 
     public func log(_ message: String) {
         self.logger.log("\(message)")
@@ -47,11 +47,12 @@ public class OBLog {
 		customLogEntries.append(OBCustomLog(message: message))
 		self.logger.log("Just posted a custom OB log with the following message: \(message)")
 	}
+
+	public init(_ appName: String = "", domain: String = "app.openbooks") {
+		let subsystemString = domain.adding(appName)
+		logger = Logger(subsystem: subsystemString, category: "general")
+	} // init
 } // end class
 
 public var customLogEntries: [OBCustomLog] = []
 public var currentOBErrorNotification: OBErrorNotification?
-
-//  OBLog.swift
-//  TributeCalculator
-//  Created by Nicholas Parsons on 25/12/2021.\

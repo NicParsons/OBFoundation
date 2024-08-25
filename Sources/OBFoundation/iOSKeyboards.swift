@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 extension View {
-	@ViewBuilder func withNumberPad() -> some View {
+	@ViewBuilder public func withNumberPad() -> some View {
 		#if os(iOS)
 		self.keyboardType(.numberPad)
 		#endif
@@ -11,7 +11,7 @@ extension View {
 		#endif
 }
 
-	@ViewBuilder func withDecimalPad() -> some View {
+	@ViewBuilder public func withDecimalPad() -> some View {
 		#if os(iOS)
 		self.keyboardType(.decimalPad)
 		#endif
@@ -23,12 +23,8 @@ extension View {
 
 #if canImport(UIKit)
 extension View {
-	func dismissKeyboard() {
+	public func dismissKeyboard() {
 		UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
 	}
 }
 #endif
-
-//  iOSKeyboards.swift
-//  TributeCalculator
-//  Created by Nicholas Parsons on 13/1/2022.
