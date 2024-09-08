@@ -29,7 +29,11 @@ public struct OBLogTableView: View {
 		} // Table view
 	} // table variable
 
-	var body: some View {
+	public init() {
+
+	}
+
+	public var body: some View {
 		VStack {
 table
 				.navigationTitle("Log")
