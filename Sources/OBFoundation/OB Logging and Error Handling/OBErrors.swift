@@ -46,5 +46,4 @@ return "Unable to decode JSON data from API request. The error description was: 
 } // end extension
 
 //  OBErrors.swift
-//  TributeCalculator
 //  Created by Nicholas Parsons on 14/1/2022.

@@ -71,5 +71,4 @@ extension View {
 */
 
 //  withOBErrorAlert.swift
-//  TributeCalculator
 //  Created by Nicholas Parsons on 6/4/2022.
